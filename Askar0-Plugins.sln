@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Askar0-Plugins", "Askar0-Plugins\Askar0-Plugins.csproj", "{4B6650F4-DDCD-47B1-832C-E29AA57401E7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Askar0-Plugins-CheatCreativeModeToggle", "Askar0-Plugins-CheatCreativeModeToggle\Askar0-Plugins-CheatCreativeModeToggle.csproj", "{3154B6D4-5C14-4F3C-BD30-EEBB1F723BE0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Askar0-Plugins-CheatDayNightToggle", "Askar0-Plugins-CheatDayNightToggle\Askar0-Plugins-CheatDayNightToggle.csproj", "{6913ECAC-4B91-4561-8C23-ABA5E44A7465}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Askar0-Plugins-CheatFlightModeToggle", "Askar0-Plugins-CheatFlightModeToggle\Askar0-Plugins-CheatFlightModeToggle.csproj", "{94DD85F6-1A50-462A-A8D1-80BFCE22B2F2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Askar0-Plugins-CheatMeteoritesToggle", "Askar0-Plugins-CheatMeteoritesToggle\Askar0-Plugins-CheatMeteoritesToggle.csproj", "{E5C97C6A-AA96-4DD8-A5CD-B544F5176E63}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Askar0-Plugins-CheatPlayerGaugeChanger", "Askar0-Plugins-CheatPlayerGaugeChanger\Askar0-Plugins-CheatPlayerGaugeChanger.csproj", "{768CA1AD-AF68-4E56-9275-CFAD731F7339}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Askar0-Plugins-CheatPlayerGaugeStopper", "Askar0-Plugins-CheatPlayerGaugeStopper\Askar0-Plugins-CheatPlayerGaugeStopper.csproj", "{A9DB5C10-9D8E-49CF-AC19-CD596D5361B9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Askar0-Plugins-CheatRunningSpeedChanger", "Askar0-Plugins-CheatRunningSpeedChanger\Askar0-Plugins-CheatRunningSpeedChanger.csproj", "{D4C8047C-8565-49A7-A2C4-B9B392CFED4F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Askar0-Plugins-CheatUnderWaterBreathing", "Askar0-Plugins-CheatUnderWaterBreathing\Askar0-Plugins-CheatUnderWaterBreathing.csproj", "{C0AFC7B7-8A32-4FB7-8772-41E4A4DFE12E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Askar0-Plugins-CheatUnlockAllBlueprintsPermanently", "Askar0-Plugins-CheatUnlockAllBlueprintsPermanently\Askar0-Plugins-CheatUnlockAllBlueprintsPermanently.csproj", "{4CDE13DB-0DFC-4C0B-A0B8-F9C915F88ADF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D4B0169C-61D3-4325-A382-9E124A6500CB}"
+	ProjectSection(SolutionItems) = preProject
+		icon_202346961993.png = icon_202346961993.png
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+		solution_build.targets = solution_build.targets
+		solution_private.targets = solution_private.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B6650F4-DDCD-47B1-832C-E29AA57401E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B6650F4-DDCD-47B1-832C-E29AA57401E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B6650F4-DDCD-47B1-832C-E29AA57401E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B6650F4-DDCD-47B1-832C-E29AA57401E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3154B6D4-5C14-4F3C-BD30-EEBB1F723BE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3154B6D4-5C14-4F3C-BD30-EEBB1F723BE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3154B6D4-5C14-4F3C-BD30-EEBB1F723BE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3154B6D4-5C14-4F3C-BD30-EEBB1F723BE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6913ECAC-4B91-4561-8C23-ABA5E44A7465}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6913ECAC-4B91-4561-8C23-ABA5E44A7465}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6913ECAC-4B91-4561-8C23-ABA5E44A7465}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6913ECAC-4B91-4561-8C23-ABA5E44A7465}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94DD85F6-1A50-462A-A8D1-80BFCE22B2F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94DD85F6-1A50-462A-A8D1-80BFCE22B2F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94DD85F6-1A50-462A-A8D1-80BFCE22B2F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94DD85F6-1A50-462A-A8D1-80BFCE22B2F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5C97C6A-AA96-4DD8-A5CD-B544F5176E63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5C97C6A-AA96-4DD8-A5CD-B544F5176E63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5C97C6A-AA96-4DD8-A5CD-B544F5176E63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5C97C6A-AA96-4DD8-A5CD-B544F5176E63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{768CA1AD-AF68-4E56-9275-CFAD731F7339}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{768CA1AD-AF68-4E56-9275-CFAD731F7339}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{768CA1AD-AF68-4E56-9275-CFAD731F7339}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{768CA1AD-AF68-4E56-9275-CFAD731F7339}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9DB5C10-9D8E-49CF-AC19-CD596D5361B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9DB5C10-9D8E-49CF-AC19-CD596D5361B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9DB5C10-9D8E-49CF-AC19-CD596D5361B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9DB5C10-9D8E-49CF-AC19-CD596D5361B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4C8047C-8565-49A7-A2C4-B9B392CFED4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4C8047C-8565-49A7-A2C4-B9B392CFED4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4C8047C-8565-49A7-A2C4-B9B392CFED4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4C8047C-8565-49A7-A2C4-B9B392CFED4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0AFC7B7-8A32-4FB7-8772-41E4A4DFE12E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0AFC7B7-8A32-4FB7-8772-41E4A4DFE12E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0AFC7B7-8A32-4FB7-8772-41E4A4DFE12E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0AFC7B7-8A32-4FB7-8772-41E4A4DFE12E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CDE13DB-0DFC-4C0B-A0B8-F9C915F88ADF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CDE13DB-0DFC-4C0B-A0B8-F9C915F88ADF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CDE13DB-0DFC-4C0B-A0B8-F9C915F88ADF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CDE13DB-0DFC-4C0B-A0B8-F9C915F88ADF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A3CC976-4ACF-45BD-87FE-D16B6A0B20FB}
+	EndGlobalSection
+EndGlobal

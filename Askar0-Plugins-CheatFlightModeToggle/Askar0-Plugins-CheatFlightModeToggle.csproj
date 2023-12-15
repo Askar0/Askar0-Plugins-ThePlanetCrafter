@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>Askar0_Plugins_CheatFlightModeToggle</AssemblyName>
+    <Description>CheatFlightModeToggle.Askar0.Plugin</Description>
+    <Version>1.0.0.0</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <RestoreAdditionalProjectSources>
+      https://api.nuget.org/v3/index.json;
+      https://nuget.bepinex.dev/v3/index.json;
+      https://nuget.samboy.dev/v3/index.json
+    </RestoreAdditionalProjectSources>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
+    <LangVersion>latest</LangVersion>
+    <Copyright>Copyright © 2023 By Askar0</Copyright>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/Askar0/Askar0-Plugins-ThePlanetCrafter.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Askar0/Askar0-Plugins-ThePlanetCrafter</PackageProjectUrl>
+  </PropertyGroup>
+
+  <Import Project="$(SolutionDir)\solution_private.targets" />
+  <!--  <Import Project="$(SolutionDir)\solution_build.targets" />  -->
+
+</Project>
