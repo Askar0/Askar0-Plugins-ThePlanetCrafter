@@ -5,6 +5,7 @@
     <AssemblyName>Askar0_Plugins</AssemblyName>
     <Description>Askar0_Plugins_SharedLibrary</Description>
     <Version>1.0.0.0</Version>
+    <Product>$(Description)</Product>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <RestoreAdditionalProjectSources>
       https://api.nuget.org/v3/index.json;

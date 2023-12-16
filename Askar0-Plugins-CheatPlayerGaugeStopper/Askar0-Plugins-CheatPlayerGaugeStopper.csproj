@@ -5,12 +5,14 @@
     <AssemblyName>Askar0_Plugins_CheatPlayerGaugeStopper</AssemblyName>
     <Description>CheatPlayerGaugeStopper.Askar0.Plugin</Description>
     <Version>1.0.0.0</Version>
+    <Product>$(Description)</Product>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <RestoreAdditionalProjectSources>
       https://api.nuget.org/v3/index.json;
       https://nuget.bepinex.dev/v3/index.json;
       https://nuget.samboy.dev/v3/index.json
     </RestoreAdditionalProjectSources>
+    <RootNamespace>Askar0_Plugins_CheatPlayerGaugeStopper</RootNamespace>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
     <LangVersion>latest</LangVersion>
     <Copyright>Copyright © 2023 By Askar0</Copyright>
