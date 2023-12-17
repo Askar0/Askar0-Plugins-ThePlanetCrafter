@@ -1,16 +1,22 @@
 
-# ThePlanetCrafter_Plugins
-BepInEx+Harmony plugin/patcher/mods for the Unity/Steam game The Planet Crafter
+# Askar0-Plugins-ThePlanetCrafter_Plugins
+BepInEx+Harmony plugin/patcher/mods for the Unity/Steam game The Planet Crafter by Miju Games
 
 Steam: https://store.steampowered.com/app/1284190/The_Planet_Crafter/
 
-## Version <a href='https://github.com/Askar0/ThePlanetCrafter-Plugins/releases'><img src='https://img.shields.io/github/v/release/Askar0/ThePlanetCrafter-Plugins' alt='Latest GitHub Release Version'/></a>
+## Version <a href='https://github.com/Askar0/Askar0-Plugins-ThePlanetCrafter/releases'><img src='https://img.shields.io/github/v/release/Askar0/Askar0-Plugins-ThePlanetCrafter' alt='Latest GitHub Release Version'/></a>
 
-:arrow_down_small: Download files from the releases: https://github.com/askar0/ThePlanetCrafter-Plugins/releases
+:arrow_down_small: Download files from the releases: https://github.com/askar0/Askar0-Plugins-ThePlanetCrafter/releases
 
 ```
-Note: 11/23/2023 - (Mods/Plugins Under Construction) - Some testing files have been uploaded. 
+Note: 23/11/2023 - (Mods/Plugins Under Construction) - Some testing files have been uploaded. 
  - These will need testing and possibly additional updates before release versions will be made available.
+Note: 15/12/2023
+ - All github commits / releases / prereleases will be signed using my personal OpenPGP Key.
+ - For verification all archive files will also have a signature file included for each plugin.
+ - To download my OpenPGP - GnuPG Public Key use the following link.
+ - https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xdd6b58ca428c22a6
+ - https://gpg4win.org/download.html to download the windows application(s) for handling PGP Keys.
 ```
 
 ## Currently Intended Support for Game Versions:
@@ -24,6 +30,9 @@ Note: 11/23/2023 - (Mods/Plugins Under Construction) - Some testing files have b
 
 :warning: I cannot promise to fix my mods for these other versions as they can get quite out-of-sync 
   with the public release.
+
+:error: All code and compiled plugins are provided as-is with no warranty or guarantees
+  implied or otherwise - use them at your own risk.
 
 **Note:** I am still in the process of creating the form and code for my mods/plugins and currently not
   working on the release versions yet. Please be patient.
