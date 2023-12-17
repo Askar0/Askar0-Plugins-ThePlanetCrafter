@@ -30,9 +30,7 @@ Note: 15/12/2023
 
 :warning: I cannot promise to fix my mods for these other versions as they can get quite out-of-sync 
   with the public release.
-
-:error: All code and compiled plugins are provided as-is with no warranty or guarantees
-  implied or otherwise - use them at your own risk.
+:warning: All code and compiled plugins are provided as-is with no warranty or guarantees  implied or otherwise - use them at your own risk.
 
 **Note:** I am still in the process of creating the form and code for my mods/plugins and currently not
   working on the release versions yet. Please be patient.
