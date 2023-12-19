@@ -41,8 +41,7 @@ namespace Askar0_Plugins_CheatPlayerGaugeStopper
         static ConfigEntry<bool> isEnabled;
         static ConfigEntry<Key> isKey;
 
-        //static bool isAppAFK = false;
-        //static bool isAppAFKh = false;
+        static bool isAppAFK = false;
 
         static ManualLogSource logger;
         private static PlayerGaugesHandler playerGaugesHandler;
@@ -74,10 +73,10 @@ namespace Askar0_Plugins_CheatPlayerGaugeStopper
                 bool wasPressedThisFrame = Keyboard.current[isKey.Value].wasPressedThisFrame;
 
                 bool flag = wasPressedThisFrame;
-                bool isAppAFK;
                 if (flag)
                 {
-                    isAppAFK = flag; // flag
+                    isAppAFK = flag;
+                    logger.LogInfo("Key Was Pressed: " + isAppAFK);  // flag
                     // Todo: Code StopGauges whilst window has focus
                     // logger.LogInfo("Toggle AFK Mode: " + isAppAFK);
                 }

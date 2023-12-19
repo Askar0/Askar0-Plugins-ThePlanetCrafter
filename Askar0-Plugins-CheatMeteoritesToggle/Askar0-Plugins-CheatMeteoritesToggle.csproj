@@ -23,6 +23,6 @@
   </PropertyGroup>
 
   <Import Project="$(SolutionDir)\solution_private.targets" />
-  <!--  <Import Project="$(SolutionDir)\solution_build.targets" />  -->
+  <Import Project="$(SolutionDir)\solution_build.targets" />
 
 </Project>

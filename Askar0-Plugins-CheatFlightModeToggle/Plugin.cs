@@ -38,7 +38,6 @@ namespace Askar0_Plugins_CheatFlightModeToggle
         static ConfigEntry<Key> isKey;
 
         static ManualLogSource logger;
-
         static PlayerMovable playerMovable;
 
         /// <summary>
@@ -47,14 +46,12 @@ namespace Askar0_Plugins_CheatFlightModeToggle
         private void Awake()
         {
             // Plugin startup logic
-
             Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
 
             isEnabled = Config.Bind("General", "Enabled", true, "Is the mod enabled?");
-
             isKey = Config.Bind("General", "KeyBind", Key.H, "Flight Toggle Keybind");
-            Plugin.logger = base.Logger;
-
+ 
+            logger = base.Logger;
             Harmony.CreateAndPatchAll(typeof(Plugin), $"{MyPluginInfo.PLUGIN_GUID}");
         }
         /// <summary>
@@ -62,21 +59,16 @@ namespace Askar0_Plugins_CheatFlightModeToggle
         /// </summary>
         private void Update()
         {
-            if (isEnabled.Value)
+            playerMovable = FindAnyObjectByType<PlayerMovable>();
+            if (isEnabled.Value || playerMovable != null)
             {
-                playerMovable = FindAnyObjectByType<PlayerMovable>();
                 bool wasPressedThisFrame = Keyboard.current[isKey.Value].wasPressedThisFrame;
                 bool flag = wasPressedThisFrame;
                 if (flag)
                 {
                     logger.LogInfo("FlightMode Key: Was pressed.");
-                    bool flag2 = playerMovable != null;
-                    bool flag3 = flag2;
-                    if (flag3)
-                    {
-                        playerMovable.flyMode = !playerMovable.flyMode;
-                        logger.LogInfo("FlightMode State Changed: Flying = " + !playerMovable.flyMode);
-                    }
+                    playerMovable.flyMode = !playerMovable.flyMode;
+                    logger.LogInfo("FlightMode State Changed: Flying = " + playerMovable.flyMode);
                 }
             }
         }

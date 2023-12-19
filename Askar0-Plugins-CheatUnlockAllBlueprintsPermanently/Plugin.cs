@@ -36,6 +36,7 @@ namespace Askar0_Plugins_CheatUnlockAllBlueprintsPermanently
     {
 
         static ConfigEntry<bool> isEnabled;
+        static GameSettingsHandler gameSettingsHandler;
 
         /// <summary>
         /// 
@@ -55,23 +56,23 @@ namespace Askar0_Plugins_CheatUnlockAllBlueprintsPermanently
         {
             if (isEnabled.Value)
             {
-                loadAllBlueprints(true);
+                LoadAllBlueprints(true);
             }
         }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="isActive"></param>
-        private void loadAllBlueprints(bool isActive)
+        private void LoadAllBlueprints(bool isActive)
         {
-            if (isActive == true)
+            gameSettingsHandler = Managers.GetManager<GameSettingsHandler>();
+            if (isActive == true && gameSettingsHandler != null)
             {
-                Managers.GetManager<GameSettingsHandler>().GetCurrentGameSettings().SetEverythingUnlocked(true);
+                gameSettingsHandler.GetCurrentGameSettings().SetEverythingUnlocked(true);
                 Logger.LogInfo("Permanent Change: All Blueprints Unlocked");
-                Logger.LogInfo("Will persist even if plugin is disabled again or even removed. To remove this state you will need to edit the unlockedEverything parameter in the save file option near the end of the file to \"unlockedEverything\":false.");
+                Logger.LogInfo("This change will persist even if plugin is disabled again or even removed. To remove this state you will need to edit the unlockedEverything parameter in the save file option near the end of the file to \"unlockedEverything\":false.");
                 isEnabled.Value = false; // Failsafe automatically turns off after activating all blueprints in a savefile.
             }
-
         }
     }
 }

@@ -1,19 +1,18 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <PropertyGroup>
-    <Destination1>$(SolutionDir)\..\Plugins\Askar0-$(Description)</Destination1>
-    <Destination2>$(PluginsFolder)\Askar0-$(Description)</Destination2>
+    <Destination1>$(SolutionDir)\..\Plugins\Askar0-Plugins\$(Description)</Destination1>
+    <Destination2>$(PluginsFolder)\Askar0-Plugins\$(Description)</Destination2>
   </PropertyGroup>
 
   <Target Name="CopyDLLs" AfterTargets="Build">
-    <Copy SourceFiles="$(TargetDir)$(AssemblyName).dll" DestinationFolder="$(PluginsFolder)\Askar0-$(Description)" />
-    <Copy SourceFiles="$(TargetDir)$(AssemblyName).pdb" DestinationFolder="$(PluginsFolder)\Askar0-$(Description)" />
-    <Copy SourceFiles="$(TargetDir)$(AssemblyName).xml" DestinationFolder="$(PluginsFolder)\Askar0-$(Description)" />
-    <Copy SourceFiles="$(TargetDir)$(AssemblyName).dll" DestinationFolder="e:\Plugins\Askar0-$(Description)" />
-    <Copy SourceFiles="$(TargetDir)$(AssemblyName).pdb" DestinationFolder="e:\Plugins\Askar0-$(Description)" />
-    <Copy SourceFiles="$(TargetDir)$(AssemblyName).xml" DestinationFolder="e:\Plugins\Askar0-$(Description)" />
+    <Copy SourceFiles="$(TargetDir)$(AssemblyName).dll" DestinationFolder="$(PluginsFolder)\Askar0-Plugins\$(Description)" />
+    <Copy SourceFiles="$(TargetDir)$(AssemblyName).pdb" DestinationFolder="$(PluginsFolder)\Askar0-Plugins\$(Description)" />
+    <Copy SourceFiles="$(TargetDir)$(AssemblyName).dll" DestinationFolder="e:\Plugins\Askar0-Plugins\$(Description)" />
+    <Copy SourceFiles="$(TargetDir)$(AssemblyName).pdb" DestinationFolder="e:\Plugins\Askar0-Plugins\$(Description)" />
 
-    <ZipDirectory SourceDirectory="e:\Plugins\Askar0-$(Description)" DestinationFile="e:\Zipfiles\Askar0-$(Description).zip" Overwrite="true" />
+    <ZipDirectory SourceDirectory="e:\Plugins\Askar0-Plugins\$(Description)" DestinationFile="e:\Zipfiles\Askar0-Plugins\$(Description).zip" Overwrite="true" />
+    <!-- <ZipDirectory SourceDirectory="e:\Zipfiles\Askar0-Plugins" DestinationFile="e:\Zipfiles\All.Askar0.Plugins.zip" Overwrite="true" /> -->
   </Target>
 
 </Project>

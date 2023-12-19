@@ -43,6 +43,7 @@ namespace Askar0_Plugins_CheatCreativeModeToggle
         static ConfigEntry<Key> isKey;
 
         static ManualLogSource logger;
+        static GameSettingsHandler gameSettingsHandler;
         // static PlayerGaugesHandler playerGaugesHandler;
         // private static bool isAppCreative = false;
 
@@ -55,7 +56,7 @@ namespace Askar0_Plugins_CheatCreativeModeToggle
             Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
 
             isEnabled = Config.Bind("General", "Enabled", true, "Is the mod enabled?");
-            isDebug = Config.Bind("General", "Debug", true, "Debugging Enabled?");
+            isDebug = Config.Bind("General", "Debug", false, "Debugging Enabled?");
 
             isKey = Config.Bind("General", "KeyBind", Key.K, "Creative Toggle Keybind");
 
@@ -68,10 +69,9 @@ namespace Askar0_Plugins_CheatCreativeModeToggle
         /// </summary>
         private void Update()
         {
-            if (isEnabled.Value)
+            gameSettingsHandler = Managers.GetManager<GameSettingsHandler>();
+            if (isEnabled.Value && gameSettingsHandler != null)
             {
-
-
                 bool wasPressedThisFrame = Keyboard.current[isKey.Value].wasPressedThisFrame;
                 bool flag = wasPressedThisFrame;
                 if (flag)
@@ -85,8 +85,8 @@ namespace Askar0_Plugins_CheatCreativeModeToggle
                         logger.LogInfo("== Plugin Update Check Mode: " + isEnabled.Value);
                         logger.LogInfo("== Plugin Update Debug ==");
 
-                        logger.LogInfo("FreeCraft Mode Was: " + Managers.GetManager<GameSettingsHandler>().GetCurrentGameSettings().GetFreeCraft());
-                        logger.LogInfo("Save Game Mode: " + Managers.GetManager<GameSettingsHandler>().GetCurrentGameSettings().GetGameMode().ToString());
+                        logger.LogInfo("FreeCraft Mode Was: " + gameSettingsHandler.GetCurrentGameSettings().GetFreeCraft());
+                        logger.LogInfo("Save Game Mode: " + gameSettingsHandler.GetCurrentGameSettings().GetGameMode().ToString());
                         logger.LogInfo("Gauge Oxygen Drain Mode: " + GaugesConsumptionHandler.GetOxygenConsumptionRate());
                         logger.LogInfo("Gauge Thirst Drain Mode: " + GaugesConsumptionHandler.GetThirstConsumptionRate());
                         logger.LogInfo("Gauge Health Drain Mode: " + GaugesConsumptionHandler.GetHealthConsumptionRate());
@@ -94,44 +94,31 @@ namespace Askar0_Plugins_CheatCreativeModeToggle
                     }
 
                     logger.LogInfo("== Creative Mode Changing State ==");
-                    Managers.GetManager<GameSettingsHandler>().TogglePlayMode();
-
-                    // Managers.GetManager<GameSettingsHandler>().GetCurrentGameSettings().SetEverythingUnlocked(true);
-
-                    bool gDrain = Managers.GetManager<GameSettingsHandler>().GetCurrentGameSettings().GetFreeCraft();
-
+                    gameSettingsHandler.TogglePlayMode();
+                    bool gDrain = gameSettingsHandler.GetCurrentGameSettings().GetFreeCraft();
                     if (gDrain)
                     {
-                        Managers.GetManager<GameSettingsHandler>().GetCurrentGameSettings().SetGaugeDrain(-10f);
-
-                        //if (!Managers.GetManager<PlayerGaugesHandler>().IsFullHealth(5f)) { Managers.GetManager<PlayerGaugesHandler>().Eat(5); }
-                        //if (!Managers.GetManager<PlayerGaugesHandler>().IsFullWater(5f)) { Managers.GetManager<PlayerGaugesHandler>().Drink(5); }
-                        //if (!Managers.GetManager<PlayerGaugesHandler>().IsFullOxygen(5f)) { Managers.GetManager<PlayerGaugesHandler>().Breath(5); }
-
-                        logger.LogInfo("Gauge Drain Mode: " + Managers.GetManager<GameSettingsHandler>().GetCurrentGameSettings().GetModifierGaugeDrain());
+                        gameSettingsHandler.GetCurrentGameSettings().SetGaugeDrain(-10f); // Slowly restores health, thirst and oxygen.
+                        logger.LogInfo("Gauge Drain Mode: " + gameSettingsHandler.GetCurrentGameSettings().GetModifierGaugeDrain());
                     }
                     else
                     {
-                        Managers.GetManager<GameSettingsHandler>().GetCurrentGameSettings().SetGaugeDrain(1f);
-                        logger.LogInfo("Gauge Drain Mode: " + Managers.GetManager<GameSettingsHandler>().GetCurrentGameSettings().GetModifierGaugeDrain());
+                        gameSettingsHandler.GetCurrentGameSettings().SetGaugeDrain(1f); // Restores normal settings
+                        logger.LogInfo("Gauge Drain Mode: " + gameSettingsHandler.GetCurrentGameSettings().GetModifierGaugeDrain());
                     }
-
                     if (isDebug.Value)
                     {
                         // Debug Log
-                        logger.LogInfo("FreeCraft Mode is Now: " + Managers.GetManager<GameSettingsHandler>().GetCurrentGameSettings().GetFreeCraft());
-                        logger.LogInfo("Save Game Mode: " + Managers.GetManager<GameSettingsHandler>().GetCurrentGameSettings().GetGameMode().ToString());
+                        logger.LogInfo("FreeCraft Mode is Now: " + gameSettingsHandler.GetCurrentGameSettings().GetFreeCraft());
+                        logger.LogInfo("Save Game Mode: " + gameSettingsHandler.GetCurrentGameSettings().GetGameMode().ToString());
                         logger.LogInfo("Gauge Oxygen Drain Mode: " + GaugesConsumptionHandler.GetOxygenConsumptionRate());
                         logger.LogInfo("Gauge Thirst Drain Mode: " + GaugesConsumptionHandler.GetThirstConsumptionRate());
                         logger.LogInfo("Gauge Health Drain Mode: " + GaugesConsumptionHandler.GetHealthConsumptionRate());
 
                         logger.LogInfo("== Changing State Finished ==");
                     }
-
-                    //isAppCreative = !isAppCreative;
-                    logger.LogInfo("Creative Mode State: " + Managers.GetManager<GameSettingsHandler>().GetCurrentGameSettings().GetFreeCraft());
+                    logger.LogInfo("Creative Mode State: " + gameSettingsHandler.GetCurrentGameSettings().GetFreeCraft());
                     logger.LogInfo("=====      Plugin Update Log: Done.      =====");
-
                 }
             }
         }

@@ -40,7 +40,7 @@ namespace Askar0_Plugins_CheatDayNightToggle
 
         static ManualLogSource logger;
         // static PlayerGaugesHandler playerGaugesHandler;
-        private static bool isAppCreative = false;
+        // private static bool isAppCreative = false;
 
         /// <summary>
         /// Initialize Plugin
@@ -54,9 +54,9 @@ namespace Askar0_Plugins_CheatDayNightToggle
 
             isDayCycle = Config.Bind("General", "DayCycle Toggle", false, "Day Night Cycle Toggle");
 
-            logger = base.Logger;
-
             Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), $"{MyPluginInfo.PLUGIN_GUID}");
+            logger = base.Logger;
+            logger.LogInfo("Setting DayNight to:" + isDayCycle.Value);
         }
         /// <summary>
         /// 
@@ -65,7 +65,7 @@ namespace Askar0_Plugins_CheatDayNightToggle
         {
             if (isEnabled.Value)
             {
-
+                //todo
             }
         }
         /// <summary>
@@ -74,7 +74,7 @@ namespace Askar0_Plugins_CheatDayNightToggle
         /// <returns></returns>
         [HarmonyPrefix]
         [HarmonyPatch(typeof(EnvironmentDayNightCycle), "Start")]
-        private static bool day()
+        static bool EnvironmentDayNightCycle_Start()
         {
             return isDayCycle.Value;
         }
