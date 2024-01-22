@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <AssemblyName>CraftFromContainers</AssemblyName>
     <Description>Aedenthorn.CraftFromContainers.FreeBuildFix.Plugin</Description>
-    <Version>0.6.1.0</Version>
+    <Version>0.6.1.1</Version>
     <Product>$(Description)</Product>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <RestoreAdditionalProjectSources>

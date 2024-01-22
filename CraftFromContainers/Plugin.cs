@@ -96,7 +96,7 @@ namespace CraftFromContainers
         {
             static bool Prefix(PlayerBuilder __instance, ref ConstructibleGhost ___ghost, float ___timeCreatedGhost, float ___timeCantBuildInterval, GroupConstructible ___ghostGroupConstructible)
             {
-                if (!modEnabled.Value || ___ghost is null || (Time.time < ___timeCreatedGhost + ___timeCantBuildInterval || Managers.GetManager<GameSettingsHandler>().GetCurrentGameSettings().GetFreeCraft()))
+                if (!modEnabled.Value || ___ghost is null || (Time.time < ___timeCreatedGhost + ___timeCantBuildInterval) || Managers.GetManager<GameSettingsHandler>().GetCurrentGameSettings().GetFreeCraft())
                     return true;
                 if (!__instance.GetComponent<PlayerBackpack>().GetInventory().ContainsItems(new List<Group> { ___ghostGroupConstructible }) && !__instance.GetComponent<PlayerBackpack>().GetInventory().ContainsItems(___ghostGroupConstructible.GetRecipe().GetIngredientsGroupInRecipe()))
                 {
